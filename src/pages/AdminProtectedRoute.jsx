@@ -1,6 +1,6 @@
-import { Navigate } from "react-router-dom";
+import { Navigate, Outlet } from "react-router-dom";
 
-const AdminProtectedRoute = ({ children }) => {
+const AdminProtectedRoute = () => {
   const user = JSON.parse(
     localStorage.getItem("user")
   );
@@ -9,7 +9,7 @@ const AdminProtectedRoute = ({ children }) => {
     return <Navigate to="/login" />;
   }
 
-  return children;
+  return <Outlet />;
 };
 
 export default AdminProtectedRoute;

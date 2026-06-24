@@ -11,6 +11,8 @@ import RegisterPage from "./pages/RegisterPage"
 import LoginPage from "./pages/LoginPage"
 import AdminPanel from "./pages/AdminPanel"
 import AdminProtectedRoute from "./pages/AdminProtectedRoute"
+import Dashboard from "./Components/Dashboard"
+import Food from "./Components/Food"
 
 
 function Layout() {
@@ -31,10 +33,21 @@ function Layout() {
           <Route path="/booktable" element={<BookTable />} />
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/login" element={<LoginPage />} />
-          <Route path="/admin" element={<AdminProtectedRoute>
-              <AdminPanel />
-            </AdminProtectedRoute>
-          } />
+          <Route path="/admin" element={<AdminProtectedRoute />}>
+            <Route path="" element={<AdminPanel />}>
+              <Route
+                path="dashboard"
+                element={<Dashboard />}
+              />
+
+              <Route
+                path="food"
+                element={<Food />}
+              />
+            </Route>
+          </Route>
+
+
         </Routes>
       </div>
       {!isAdminRoute && <Footer />}
