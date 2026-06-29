@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Food = () => {
 
@@ -21,6 +22,22 @@ const Food = () => {
   console.log(foodData);
 
 
+  const navigate = useNavigate();
+
+
+  const HandelDelete = async (id) => {
+
+    try {
+      const response = await axios.delete(`http://localhost:8800/api/food/delete/${id}`, {
+        withCredentials: true
+      })
+      alert(response.data.message);
+      getAllData();
+    } catch (error) {
+      console.log(error.message || error);
+    }
+  }
+
 
 
   return (
@@ -36,7 +53,7 @@ const Food = () => {
           </p>
         </div>
 
-        <button className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-md text-sm font-medium">
+        <button className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-md text-sm font-medium" onClick={() => navigate("/admin/add-food")}>
           Add Food
         </button>
       </div>
@@ -44,7 +61,7 @@ const Food = () => {
       {/* Table */}
       <div className="bg-white border border-gray-200 rounded-lg overflow-hidden">
         <div className="overflow-x-auto">
-          <table className="w-full min-w-[900px]">
+          <table className="w-full min-w-225">
             <thead className="bg-gray-50">
               <tr>
                 <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">
@@ -105,11 +122,11 @@ const Food = () => {
 
                   <td className="px-6 py-4">
                     <div className="flex justify-center gap-2">
-                      <button className="px-3 py-1.5 text-sm border border-blue-600 text-blue-600 rounded hover:bg-blue-600 hover:text-white">
+                      <button className="px-3 py-1.5 text-sm border border-blue-600 text-blue-600 rounded hover:bg-blue-600 hover:text-white" onClick={() => navigate(`/admin/edit/${food._id}`)}>
                         Edit
                       </button>
 
-                      <button className="px-3 py-1.5 text-sm border border-red-600 text-red-600 rounded hover:bg-red-600 hover:text-white">
+                      <button className="px-3 py-1.5 text-sm border border-red-600 text-red-600 rounded hover:bg-red-600 hover:text-white" onClick={() => HandelDelete(food._id)}  >
                         Delete
                       </button>
                     </div>
@@ -127,7 +144,7 @@ const Food = () => {
           </p>
         </div>
       </div>
-    </div>
+    </div >
   );
 };
 

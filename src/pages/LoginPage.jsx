@@ -26,12 +26,13 @@ const LoginPage = () => {
 
       localStorage.setItem("user", JSON.stringify(response.data.user)
       );
-      
+
       if (response.data.user.role === "admin") {
-        navigate("/admin");
+        navigate("/admin/dashboard");
       } else {
         navigate("/");
       }
+      
     } catch (error) {
       console.log(error.message || error);
     }

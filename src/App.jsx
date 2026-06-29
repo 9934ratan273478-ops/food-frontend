@@ -13,6 +13,11 @@ import AdminPanel from "./pages/AdminPanel"
 import AdminProtectedRoute from "./pages/AdminProtectedRoute"
 import Dashboard from "./Components/Dashboard"
 import Food from "./Components/Food"
+import AddFoodPage from "./pages/AddFoodPage"
+import EditFoodPage from "./pages/EditFoodPage"
+import DetailsPage from "./pages/DetailsPage"
+import Order from "./pages/Order"
+import Bookings from "./pages/Bookings"
 
 
 function Layout() {
@@ -31,9 +36,12 @@ function Layout() {
           <Route path="/pages" element={<Pages />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/booktable" element={<BookTable />} />
+          <Route path="/get-details/:id" element={<DetailsPage />} />
+          <Route path="/order" element={<Order />} />
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/admin" element={<AdminProtectedRoute />}>
+
             <Route path="" element={<AdminPanel />}>
               <Route
                 path="dashboard"
@@ -43,6 +51,18 @@ function Layout() {
               <Route
                 path="food"
                 element={<Food />}
+              />
+              <Route
+                path="/admin/add-food"
+                element={<AddFoodPage />}
+              />
+              <Route
+                path="/admin/edit/:id"
+                element={<EditFoodPage />}
+              />
+              <Route
+                path="/admin/booking"
+                element={<Bookings />}
               />
             </Route>
           </Route>

@@ -1,13 +1,64 @@
 import "./BookTable.css";
+import { useState } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function BookTable() {
+
+  const [date, setDate] = useState("");
+  const [time, setTime] = useState("");
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [person, setPerson] = useState("1");
+
+  const [loading, setLoading] = useState(false);
+
+  const navigate = useNavigate()
+
+  const handleBooking = async () => {
+    if (!date || !time || !name || !phone || !person) {
+      return alert("Please fill all fields");
+    }
+
+    try {
+      setLoading(true);
+
+      const response = await axios.post(
+        "http://localhost:8800/api/table/create",
+        {
+          date,
+          time,
+          name,
+          phone,
+          person,
+        }
+      );
+
+      navigate("/");
+
+
+
+      setDate("");
+      setTime("");
+      setName("");
+      setPhone("");
+      setPerson("1");
+
+
+    } catch (error) {
+      alert(error.response?.data?.message || error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <section className="book-table">
       <div className="book-table-container">
         <h1>Book A Table</h1>
 
         <p className="subtitle">
-          we consider all the drivers of change gives you the components
+          We consider all the drivers of change gives you the components
           <br />
           you need to change to create a truly happens.
         </p>
@@ -16,44 +67,74 @@ function BookTable() {
           <div className="form-row">
             <div className="form-group">
               <label>Date</label>
-              <input type="date" />
+
+              <input
+                type="date"
+                value={date}
+                onChange={(e) => setDate(e.target.value)}
+              />
             </div>
 
             <div className="form-group">
               <label>Time</label>
-              <select>
-                <option>06:30 PM</option>
-                <option>07:00 PM</option>
-                <option>07:30 PM</option>
-                <option>08:00 PM</option>
-              </select>
+
+              <input
+                type="time"
+                value={time}
+                onChange={(e) => setTime(e.target.value)}
+              />
             </div>
           </div>
 
           <div className="form-row">
             <div className="form-group">
               <label>Name</label>
-              <input type="text" placeholder="Enter your name" />
+
+              <input
+                type="text"
+                placeholder="Enter your name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              />
             </div>
 
             <div className="form-group">
               <label>Phone</label>
-              <input type="text" placeholder="XX-XXX-XXX-XXXX" />
+
+              <input
+                type="text"
+                placeholder="Enter phone number"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+              />
             </div>
           </div>
 
           <div className="form-group full-width">
             <label>Total Person</label>
-            <select>
-              <option>1 Person</option>
-              <option>2 Person</option>
-              <option>3 Person</option>
-              <option>4 Person</option>
-              <option>5 Person</option>
+
+            <select
+              value={person}
+              onChange={(e) => setPerson(e.target.value)}
+            >
+              <option value="1">1 Person</option>
+              <option value="2">2 Person</option>
+              <option value="3">3 Person</option>
+              <option value="4">4 Person</option>
+              <option value="5">5 Person</option>
+              <option value="6">6 Person</option>
+              <option value="7">7 Person</option>
+              <option value="8">8 Person</option>
             </select>
           </div>
 
-          <button className="book-btn">Book A Table</button>
+          <button
+            className="book-btn"
+            onClick={handleBooking}
+            disabled={loading}
+          >
+            {loading ? "Booking..." : "Book A Table"}
+          </button>
         </div>
       </div>
 

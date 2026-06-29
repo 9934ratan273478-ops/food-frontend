@@ -1,16 +1,38 @@
-import { LayoutDashboard, LogOut, X, Users } from "lucide-react";
-import { NavLink } from "react-router-dom";
+import { LayoutDashboard, LogOut, X, Users, BookIcon } from "lucide-react";
+import { NavLink, useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
+import axios from "axios";
 
 const NAV_ITEMS = [
   { path: "/admin/dashboard", label: "Dashboard", icon: LayoutDashboard },
   { path: "/admin/food", label: "Food", icon: Users },
+  { path: "/admin/booking", label: "Bookings", icon: BookIcon }
 
 
 ];
 
-const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
 
+
+
+const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
+  const navigate = useNavigate()
+
+  const handleLogout = async () => {
+    try {
+      await axios.get(
+        "http://localhost:8800/api/auth/logout",
+        {
+          withCredentials: true,
+        }
+      );
+
+      localStorage.removeItem("user");
+
+      navigate("/login");
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
 
   return (
@@ -106,6 +128,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
             whileTap={{ scale: 0.97 }}
 
             className="w-full flex cursor-pointer items-center gap-3 px-4 py-2.5 bg-red-600 rounded-xl text-sm font-medium text-white"
+            onClick={() => handleLogout()}
           >
             <LogOut size={18} />
             Logout
