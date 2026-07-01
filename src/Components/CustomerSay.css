@@ -1,7 +1,7 @@
 .Customer-main {
   width: 100%;
-  padding: 50px 7%;
-  background-color: #F9F9F7;
+  padding: 50px 8%;
+  background-color: white;
 }
 
 .Customer-main .heading {
@@ -12,6 +12,7 @@
 }
 .Customer-main .heading-main{
   font-size: 2.3rem;
+  font-weight: 600;
   text-align: center;
   font-style: italic;
   color: #2C2F24;
@@ -21,18 +22,19 @@
 .Customer-main .Card-div {
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  gap: 20px;
   margin-top: 30px;
 }
 .Card-div .Card {
   width: 33%;
   height: 100%;
-  background-color: #f9f9f7;
+  background-color: #F9F9F7;
   padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: 9px;
+  border-radius: 25px;
 }
 .Card .heading {
   font-size: 1.5rem;

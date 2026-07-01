@@ -10,8 +10,8 @@ function HeroSection() {
             your taste</h2>
           <p className="para">Discover delectable cuisine and unforgettable moments in our welcoming, culinary haven.</p>
           <div className="button-div">
-            <button className="Book-btn" onClick={() => navigate("/booktable")}>Book A Table</button>
-            <button className="Menu-btn">Explore Menu</button>
+            <button className="Book-btn" onClick={()=> navigate("/booktable")}>Book A Table</button>
+            <button className="Menu-btn" onClick={()=> navigate("/menuhero")}>Explore Menu</button>
           </div>
         </div>
       </div>

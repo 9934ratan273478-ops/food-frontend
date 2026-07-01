@@ -3,7 +3,7 @@ function CustomerSay() {
   return (
     <>
       <div className="Customer-main">
-        <h2 className="heading-main">What Our Customers Say</h2>
+        <h2 className="heading-main">What Our Customers Say:-</h2>
         <div className="Card-div">
           <div className="Card">
             <h3 className="heading">“The best restaurant”</h3>
@@ -20,7 +20,7 @@ function CustomerSay() {
           </div>
           <div className="Card">
             <h3 className="heading">“Simply delicious”</h3>
-            <p className="para">Place exceeded my expectations on all fronts. The ambiance was cozy and relaxed, making it a perfect venue for our anniversary dinner. Each dish was prepared and beautifully presented.</p>
+            <p className="para">Place exceeded my expectations on all fronts. The ambiance was cozy and relaxed, making it a perfect venue for our anniversary dinner. Each dish was prepared beautifully.</p>
             <div className="profile-div">
               <div className="profile-img">
                 <img className="image" src="https://i.pinimg.com/736x/34/16/10/34161007958a0c577d8c8a4efa4018eb.jpg" alt="" />
@@ -33,7 +33,7 @@ function CustomerSay() {
           </div>
           <div className="Card">
             <h3 className="heading">““One of a kind restaurant””</h3>
-            <p className="para">The culinary experience at place is first to none. The atmosphere is vibrant, the food - nothing short of extraordinary. The food was the highlight of our evening. Highly recommended.</p>
+            <p className="para">The culinary experience at place is first to none. The atmosphere is vibrant, the food - nothing short of extraordinary. The food was the highlight of our evening.</p>
             <div className="profile-div">
               <div className="profile-img">
                 <img className="image" src="https://preview.redd.it/for-me-amir-khan-is-one-of-the-most-versatile-actor-in-v0-g8se27fn5ymc1.png?width=640&crop=smart&auto=webp&s=f8b0511a29e5a163444abb709310fc5277c83900" alt="" />

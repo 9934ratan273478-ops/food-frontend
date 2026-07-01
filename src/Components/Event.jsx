@@ -7,7 +7,7 @@ function Event() {
   return (
     <>
       <div className="Event-main">
-        <h2 className="Heading">We also offer unique <br /> services for your events</h2>
+        <h2 className="Heading">We also offer unique services for your events:-</h2>
         <div className="Card-div">
           <div className="card">
             <img className="image" src={Event1} alt="" />

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import "./Menu.css"
 import { Link } from "react-router-dom";
+import Moreapp from "../Components/Moreapp";
 
 function Menu() {
   const [foods, setFoods] = useState([]);
@@ -26,6 +27,7 @@ function Menu() {
   }, []);
 
   return (
+    <>
     <section className="menu-section">
       <h1 className="menu-title">Our Menu</h1>
 
@@ -65,7 +67,11 @@ function Menu() {
         </div>
       )}
     </section>
+    <Moreapp/>
+  </>
+    
   );
+  
 }
 
 export default Menu;

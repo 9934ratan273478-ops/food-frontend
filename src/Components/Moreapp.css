@@ -1,0 +1,99 @@
+/* OrderApps.css */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.order-section{
+    width: 100%;
+    min-height: 500px;
+    background: #f7f7f5;
+
+    padding: 80px 7%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.order-left{
+    width: 35%;
+}
+
+.order-left h1{
+    font-size: 60px;
+    color: #2C2F24;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+    line-height: 70px;
+}
+
+.order-left p{
+    color: #666;
+    line-height: 28px;
+    font-size: 16px;
+}
+
+.order-right{
+    width: 60%;
+
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+.app-box{
+    background: white;
+    height: 100px;
+
+    border-radius: 12px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.app-box img{
+    width: 140px;
+    object-fit: contain;
+}
+
+
+/* =============== MOBILE RESPONSIVE =============== */
+
+@media (max-width:576px){
+
+    .order-section{
+        flex-direction: column;
+        padding: 50px 5%;
+    }
+
+    .order-left{
+        width: 100%;
+        text-align: center;
+    }
+
+    .order-left h1{
+        font-size: 40px;
+        line-height: 50px;
+    }
+
+    .order-right{
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+
+    .app-box{
+        height: 90px;
+    }
+
+    .app-box img{
+        width: 120px;
+    }
+
+}

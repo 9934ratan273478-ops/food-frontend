@@ -100,7 +100,15 @@
   padding: 3% 1.2rem;
   border-radius: 1.5rem;
   cursor: pointer;
+  border: 2px solid #2c2f24;
+  display: inline-block;
+  /* padding: 20px 30px; */
 }
+.bk-btn:hover {
+  background-color: #AD343E;
+  color: whitesmoke;
+}
+
 .bottom-section .menu-icon {
   display: flex;
   align-items: center;
