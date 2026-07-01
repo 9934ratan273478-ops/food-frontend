@@ -4,7 +4,7 @@ import { CgMail } from "react-icons/cg";
 import { FaTwitter } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
-import logo from "../assets/Food Logo.png";
+import logo from "../assets/Food-Logo.png";
 import { TiThMenu } from "react-icons/ti";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
