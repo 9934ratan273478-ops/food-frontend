@@ -1,6 +1,6 @@
-import "./blog.css";
+import "./Blog.css";
 
-function blog() {
+function Blog() {
   const blogs = [
     {
       image: "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=800",
@@ -80,4 +80,4 @@ function blog() {
   );
 }
 
-export default blog;
+export default Blog;
