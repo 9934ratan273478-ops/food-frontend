@@ -4,6 +4,7 @@ import { CgMail } from "react-icons/cg";
 import { FaTwitter } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
+import { FaGithub } from "react-icons/fa";
 import logo from "../assets/Food-Logo.png";
 import { TiThMenu } from "react-icons/ti";
 import { Link, useNavigate } from "react-router-dom";
@@ -53,33 +54,37 @@ function Navbar() {
           <div className="top-left">
             <div className="phone">
               <FaPhoneAlt size={20} />
-              91 6371287364
+              +91 9934273478
             </div>
 
             <div className="email">
               <CgMail size={30} />
-              dasmanojkumar308@gmail.com
+             9934ratan273478@gmail.com
             </div>
           </div>
 
           {/* Right */}
           <div className="top-right">
-            <a href="">
+            <a href="https://x.com/home">
               <div className="social-icons-div">
                 <FaTwitter size={15} />
               </div>
             </a>
-            <a href="">
+            <a href="https://www.facebook.com/profile.php?id=100087131604899">
               <div className="social-icons-div">
                 <FaFacebookF size={15} />
               </div>
             </a>
+            <a href="https://www.instagram.com/rajratan441/">
             <div className="social-icons-div">
               <FaInstagram size={15} />
             </div>
+            </a>
+            <a href="https://github.com/9934ratan273478-ops">
             <div className="social-icons-div">
-              <FaTwitter size={15} />
+              <FaGithub size={20} />
             </div>
+            </a>
           </div>
         </div>
         {/* Bottom Section */}
@@ -87,7 +92,7 @@ function Navbar() {
           {/* Logo */}
           <div className="logo-div">
             <img className="logo" src={logo} alt="Logo" />
-            <h2 className="name">Manoj FoodShop</h2>
+            <h2 className="name">Raj FoodShop</h2>
           </div>
           {/* Menu */}
           <div className="Menu">

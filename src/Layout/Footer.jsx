@@ -1,6 +1,9 @@
 import "./Footer.css"
 import logo from "../assets/Food-Logo.png"
 import { FaTwitter } from "react-icons/fa";
+import { FaFacebookF } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa6";
+import { FaGithub } from "react-icons/fa";
 import img1 from "../assets/img1.png"
 import img2 from "../assets/img-2.png"
 import img3 from "../assets/img-3.png"
@@ -15,29 +18,29 @@ function Footer() {
         <div className="left">
           <div className="logo-name">
             <img className="left-logo" src={logo} alt="" />
-            <h2 className="name">Manoj FoodShop</h2>
+            <h2 className="name">Raj FoodShop</h2>
           </div>
           <p className="para">In the new era of technology we look a in the future with certainty and pride to for our company and.</p>
           {/* Social Links */}
           <div className="social-linkDiv">
-            <a href="">
+            <a href="https://x.com/home">
               <div className="social-item">
                 <FaTwitter size={20} />
               </div>
             </a>
-            <a href="">
+            <a href="https://www.facebook.com/profile.php?id=100087131604899">
               <div className="social-item">
-                <FaTwitter size={20} />
+                <FaFacebookF size={20} />
               </div>
             </a>
-            <a href="">
+            <a href="https://www.instagram.com/rajratan441/">
               <div className="social-item">
-                <FaTwitter size={20} />
+                <FaInstagram size={20} />
               </div>
             </a>
-            <a href="">
+            <a href="https://github.com/9934ratan273478-ops">
               <div className="social-item">
-                <FaTwitter size={20} />
+                <FaGithub size={20} />
               </div>
             </a>
           </div>

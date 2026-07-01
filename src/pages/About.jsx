@@ -1,3 +1,5 @@
+import CustomerSay from "../Components/CustomerSay"
+import GuestInfo from "../Components/GuestInfo"
 import Video from "../Components/Video"
 import WeProvide from "../Components/WeProvide"
 
@@ -6,6 +8,8 @@ function About() {
     <>
       <WeProvide />
       <Video />
+      <GuestInfo/>
+      <CustomerSay/>
     </>
   )
 }
