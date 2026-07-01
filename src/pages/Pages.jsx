@@ -1,4 +1,4 @@
-import Blog from"../Components/blog.jsx"
+import Blog from"../Components/Blog";
 function Pages(){
     return(
         <>
