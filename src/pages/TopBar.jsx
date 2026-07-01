@@ -45,6 +45,11 @@ const TopBar = ({ setSidebarOpen }) => {
     };
   }, []);
 
+
+  const userData = JSON.parse(localStorage.getItem("user"));
+
+  console.log(userData);
+
   return (
     <motion.header
       initial={{ y: -20, opacity: 0 }}
@@ -73,7 +78,7 @@ const TopBar = ({ setSidebarOpen }) => {
           }}
           className="text-[15px] font-medium tracking-widest text-slate-800"
         >
-          SAVERA
+          Manoj   Food Shop
         </motion.span>
       </div>
 
@@ -101,11 +106,11 @@ const TopBar = ({ setSidebarOpen }) => {
           >
             <div className="hidden sm:block text-right">
               <p className="text-[13px] font-medium text-slate-800 leading-tight">
-                {"admin?.name"}
+                {userData?.fullName}
               </p>
 
               <p className="text-[11px] uppercase tracking-wider text-slate-400 leading-tight">
-                {"admin?.role"}
+                {userData?.role}
               </p>
             </div>
 
@@ -146,53 +151,13 @@ const TopBar = ({ setSidebarOpen }) => {
 
                   <div>
                     <p className="text-[13px] font-medium text-slate-800">
-                      {"admin?.name"}
+                      {userData?.fullName}
                     </p>
 
                     <p className="text-[11px] text-slate-400 capitalize">
-                      {"admin?.role"}
+                      {userData?.role}
                     </p>
                   </div>
-                </div>
-
-                {/* Actions */}
-                <div className="p-1.5">
-                  <motion.button
-                    initial={{ opacity: 0, x: -6 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.2 }}
-                    whileHover={{
-                      backgroundColor: "#f8fafc",
-                    }}
-                    whileTap={{ scale: 0.98 }}
-                    className="w-full flex items-center gap-2.5 px-2.5 py-2 rounded-lg text-[13px] text-slate-700 transition text-left"
-                  >
-                    <User
-                      size={15}
-                      className="text-slate-400"
-                    />
-                    My profile
-                  </motion.button>
-                </div>
-
-                {/* Sign out */}
-                <div className="border-t border-slate-100 p-1.5">
-                  <motion.button
-                    initial={{ opacity: 0, x: -6 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{
-                      delay: 0.05,
-                      duration: 0.2,
-                    }}
-                    whileHover={{
-                      backgroundColor: "#fef2f2",
-                    }}
-                    whileTap={{ scale: 0.98 }}
-                    className="w-full flex items-center gap-2.5 px-2.5 py-2 rounded-lg text-[13px] text-red-500 transition text-left cursor-pointer"
-                  >
-                    <LogOut size={15} />
-                    Sign out
-                  </motion.button>
                 </div>
               </motion.div>
             )}

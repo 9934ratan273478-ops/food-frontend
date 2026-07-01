@@ -1,9 +1,9 @@
-function Pages() {
-  return (
-    <>
-      <h1>Pages</h1>
-    </>
-  )
+import Blog from"../Components/blog.jsx"
+function Pages(){
+    return(
+        <>
+        <Blog/>
+        </>
+    )
 }
-
-export default Pages
+export default Pages;

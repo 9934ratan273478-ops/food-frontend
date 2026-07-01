@@ -1,0 +1,155 @@
+.blog {
+  width: 100%;
+  padding: 80px 8%;
+  background: #f9f9f7;
+}
+
+.blog-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.blog-header h1 {
+  font-size: 64px;
+  font-family: "Times New Roman", serif;
+  font-weight: 600;
+  color: #2c2f24;
+  margin-bottom: 20px;
+}
+
+.blog-header p {
+  font-size: 17px;
+  color: #6f6f6f;
+  line-height: 1.8;
+}
+
+/* Grid */
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+/* Card */
+
+.blog-card {
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.35s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+}
+
+.blog-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.blog-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.blog-card:hover img {
+  transform: scale(1.08);
+}
+
+.blog-content {
+  padding: 22px;
+}
+
+.blog-content span {
+  display: inline-block;
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 12px;
+}
+
+.blog-content h3 {
+  font-size: 20px;
+  color: #2c2f24;
+  font-weight: 600;
+  line-height: 1.5;
+  transition: color 0.3s ease;
+}
+
+.blog-card:hover h3 {
+  color: #ad343e;
+}
+
+/* Laptop */
+
+@media (max-width: 1200px) {
+  .blog-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .blog-header h1 {
+    font-size: 55px;
+  }
+}
+
+/* Tablet */
+
+@media (max-width: 992px) {
+  .blog {
+    padding: 70px 6%;
+  }
+
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .blog-header h1 {
+    font-size: 46px;
+  }
+
+  .blog-card img {
+    height: 200px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 576px) {
+  .blog {
+    padding: 50px 20px;
+  }
+
+  .blog-header {
+    margin-bottom: 40px;
+  }
+
+  .blog-header h1 {
+    font-size: 34px;
+    line-height: 1.2;
+  }
+
+  .blog-header p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .blog-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .blog-card img {
+    height: 220px;
+  }
+
+  .blog-content {
+    padding: 18px;
+  }
+
+  .blog-content h3 {
+    font-size: 18px;
+  }
+}
