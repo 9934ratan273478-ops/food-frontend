@@ -1,22 +1,31 @@
 .Customer-main {
   width: 100%;
   padding: 50px 7%;
+  background-color: #F9F9F7;
 }
 
 .Customer-main .heading {
   font-size: 2rem;
   text-align: center;
   font-style: italic;
+  color: #AD343E;
+}
+.Customer-main .heading-main{
+  font-size: 2.3rem;
+  text-align: center;
+  font-style: italic;
+  color: #2C2F24;
+
 }
 
 .Customer-main .Card-div {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-top: 30px;
 }
 .Card-div .Card {
-  width: 30%;
+  width: 33%;
   height: 100%;
   background-color: #f9f9f7;
   padding: 2rem;
