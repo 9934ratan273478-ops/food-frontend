@@ -52,8 +52,22 @@
   bottom: 50px;
   left: 400px;
   border-radius: 9px;
+  
 }
-
+.contact .cont-heading{
+  font-size: 1.5rem;
+  color: white;
+  font-weight:400;
+  margin-top: 45px;
+  margin-bottom: 40px;
+  margin-left: 35px;
+}
+.contact .cont{
+  font-size:1.1rem;
+  color:whitesmoke;
+  margin-left: 35px;
+  margin-top: 20px;
+}
 @media (max-width: 576px) {
   .Main-div {
     flex-direction: column;

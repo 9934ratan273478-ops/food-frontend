@@ -1,5 +1,9 @@
 import "./Event.css"
-import Event1 from "../assets/Event1.png"
+import Event1 from "../assets/img-1.jpg"
+import Event2 from "../assets/img-2.jpg"
+import Event3 from "../assets/img-3.jpg"
+import Event4 from "../assets/img-4.jpg"
+
 function Event() {
   return (
     <>
@@ -12,18 +16,18 @@ function Event() {
             <p className="para">In the new era of technology we look in the future with certainty for life.</p>
           </div>
           <div className="card">
-            <img className="image" src={Event1} alt="" />
-            <h2 className="head">Caterings</h2>
+            <img className="image" src={Event4} alt="" />
+            <h2 className="head">Birthdays</h2>
             <p className="para">In the new era of technology we look in the future with certainty for life.</p>
           </div>
           <div className="card">
-            <img className="image" src={Event1} alt="" />
-            <h2 className="head">Caterings</h2>
+            <img className="image" src={Event3} alt="" />
+            <h2 className="head">Weddings</h2>
             <p className="para">In the new era of technology we look in the future with certainty for life.</p>
           </div>
           <div className="card">
-            <img className="image" src={Event1} alt="" />
-            <h2 className="head">Caterings</h2>
+            <img className="image" src={Event2} alt="" />
+            <h2 className="head">Events</h2>
             <p className="para">In the new era of technology we look in the future with certainty for life.</p>
           </div>
         </div>
