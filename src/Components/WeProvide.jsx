@@ -16,17 +16,25 @@ function WeProvide() {
           <h2 className="heading">We provide healthy food for your family.</h2>
           <p className="our-story">Our story began with a vision to create a unique dining experience that merges fine dining, exceptional service, and a vibrant ambiance. Rooted in city's rich culinary culture, we aim to honor our local roots while infusing a global palate.</p>
           <p className="at-place">At place, we believe that dining is not just about food, but also about the overall experience. Our staff, renowned for their warmth and dedication, strives to make every visit an unforgettable event.</p>
-          <button className="About-btn" onClick={()=> navigate("/secrettip")}>More About Us</button>
+          <button className="About-btn" onClick={() => navigate("/secrettip")}>More About Us</button>
         </div>
         <div className="contact">
-          <p className="cont-heading">Come and visit us</p>
-          <div className="cont"><CiPhone /> +91 9934273478
+          <h2 className="cont-heading">Come and visit us</h2>
 
+          <div className="cont">
+            <CiPhone />
+            <span>+91 9934273478</span>
           </div>
-          <div className="cont"><MdOutlineMail /> 9934ratan273478@gmail.com</div>
-          <div className="cont"><FaLocationDot /> Bhubaneswar</div>
 
-          
+          <div className="cont">
+            <MdOutlineMail />
+            <span>9934ratan273478@gmail.com</span>
+          </div>
+
+          <div className="cont">
+            <FaLocationDot />
+            <span>Bhubaneswar</span>
+          </div>
         </div>
       </div>
     </>
